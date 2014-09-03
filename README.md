@@ -19,7 +19,7 @@
 	
 ## 安装
 
-[安智](http://apk.hiapk.com/appinfo/tk.woppo.mgame)
+	[安智](http://apk.hiapk.com/appinfo/tk.woppo.mgame)
 
 ## 预览
 
