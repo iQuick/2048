@@ -19,6 +19,8 @@
 	
 ## 安装
 
+[安智](http://apk.hiapk.com/appinfo/tk.woppo.mgame)
+
 ## 预览
 
 ![2048](https://github.com/iQuick/2048/blob/master/art/1.png) ![2048](https://github.com/iQuick/2048/blob/master/art/2.png)
