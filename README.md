@@ -19,7 +19,7 @@
 	
 ## 安装
 
-       [安智](http://apk.hiapk.com/appinfo/tk.woppo.mgame)
+[安智](http://apk.hiapk.com/appinfo/tk.woppo.mgame)
 
 ## 预览
 
@@ -110,10 +110,10 @@
 ## 广告平台推荐
 
 	有米(如果想加入有米广告，力荐从此链接注册，有惊喜等着你哦)
-        [https://www.youmi.net/account/register?r=NDg0ODA=](https://www.youmi.net/account/register?r=NDg0ODA=)
+[https://www.youmi.net/account/register?r=NDg0ODA=](https://www.youmi.net/account/register?r=NDg0ODA=)
 	
 	酷果
-        [http://www.kuguopush.com/](http://www.kuguopush.com/)
+[http://www.kuguopush.com/](http://www.kuguopush.com/)
 	
 ## 导入
 
