@@ -1,6 +1,140 @@
 2048
 ====
 
+## Docs (English)
+
+2048 you look good
+
+## Introduction
+
+Programmers, are you still holding a meager salary for your boss’s hard work, or don’t know how to use your own apps or games?
+To make money!
+To
+Here IQuick will teach you how to use your own application to earn your first pot of gold!
+Are you saying that your application has not been made yet?
+No, here is a complete game application for you. You just need to make a few modifications to become a completely your own application
+Yes, such as changing 4*4 to 5*5, or even something else. If you are really lazy, just change the package name and advertisement of this app to your own.
+You can upload it to the market and easily earn your first pot of gold.
+To
+If you think this article is very good, just like the author, download the application from the installation address below, or when importing this project to run,
+Install an app from the ad. A move of your finger can make the author go a step further and make the author more motivated to share in the future.
+To
+## Installation
+
+[Anzhi](http://apk.hiapk.com/appinfo/tk.woppo.mgame)
+
+## Preview
+
+![2048](https://github.com/iQuick/2048/blob/master/art/1.png) ![2048](https://github.com/iQuick/2048/blob/master/art/ 2.png)
+![2048](https://github.com/iQuick/2048/blob/master/art/3.png) ![2048](https://github.com/iQuick/2048/blob/master/art/ 4.png)
+
+## Project structure
+
+![2048](https://github.com/iQuick/2048/blob/master/art/6.png)
+
+## How to load ads
+
+Add the advertising Lib of the corresponding platform mentioned in the project structure to the project
+To
+Add permissions and necessary components in AndroidManifest.xml
+============
+<!--Permission to add -->
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.READ_PHONE_STATE" /><!-- ismi -->
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.GET_TASKS" /><!-- TimeTask -->
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /><!-- WindowManager -->
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+<supports-screens android:anyDensity="true" />
+To
+==============
+<!-- Cool Fruit Advertising Component -->
+        <activity android:name="com.phkg.b.MyBActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:label=""/>
+
+        <receiver android:name="com.phkg.b.MyBReceive">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <data android:scheme="package" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Youmi advertising component -->
+        <activity android:name="net.youmi.android.AdBrowser"
+android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Light.NoTitleBar">
+        </activity>
+        <service
+android:name="net.youmi.android.AdService"
+android:exported="false">
+        </service>
+        <receiver android:name="net.youmi.android.AdReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+To
+Add ad loading code in MainView
+===============
+//There are rice ads
+private void loadYMAds() {
+// instantiate LayoutParams (important)
+FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(
+FrameLayout.LayoutParams.FILL_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT);
+
+// Set the floating position of the ad bar
+layoutParams.gravity = Gravity.BOTTOM | Gravity.RIGHT; // The example here is the lower right corner
+// instantiate advertising banner
+AdView adView = new AdView(this, AdSize.FIT_SCREEN);
+adView.setAdListener(new YMAdsListener());
+// Call the addContentView function of Activity
+this.addContentView(adView, layoutParams);
+}
+To
+//Load cool fruit ads
+private void loadKGAds() {
+BManager.showTopBanner(MainActivity.this, BManager.CENTER_BOTTOM,
+BManager.MODE_APPIN, Const.COOID, Const.QQ_CHID);
+BManager.setBMListner(new ADSListener());
+}
+To
+### Don't forget to replace the Appkey in Const with the Appkey you applied for in the advertisement
+To
+## Advertising platform recommendation
+
+Youmi (If you want to join the Youmi advertisement, I strongly recommend registering from this link, there are surprises waiting for you)
+[https://www.youmi.net/account/register?r=NDg0ODA=](https://www.youmi.net/account/register?r=NDg0ODA=)
+To
+Kugo
+[http://www.kuguopush.com/](http://www.kuguopush.com/)
+To
+## Import
+
+If it is Android Studio, it can be imported directly.
+To
+If you want to import Eclipse, create a new project with the same package name, and copy all the files in Java under this project to src in the new project
+In, copy libs and src of this project to the corresponding folder of the new project.
+And replace the AndroidManifest.xml file in this project with the new project AndroidManifest.xml file.
+At this point you can complete the migration and you can run the game.
+To
+## Note
+To
+Pay attention when converting this project into your first pot of gold project
+1. Change the package name
+2. Replace the application Appkey in the Const class with the application Appkey you applied for on the corresponding advertising platform
+
+
+## Docs ()
+
 2048有你好看
 
 ## 引言
